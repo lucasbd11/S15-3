@@ -17,7 +17,11 @@ fct = lambda w: 20*np.log(h0)-10*np.log(1+(w**2)/w0)
 
 y = [fct(i) for i in create_log(3)]
 
-
+ax = plt.gca()
 plt.plot(create_log(3),y)
 plt.xscale("log")
+
+ax.set_xlabel("w (rad/s)")
+ax.set_ylabel("GdB")
+
 plt.show()
